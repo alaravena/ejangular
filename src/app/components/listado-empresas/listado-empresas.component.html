@@ -1,0 +1,22 @@
+<p *ngFor="let empresa of empresas"> {{ empresa.nombre }}</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Puestos</th>
+      <th scope="col">Contacto</th>
+      <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let empresa of empresas; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ empresa.nombre }}</td>
+      <td>{{ empresa.puestos | number }}</td>
+      <td>{{ empresa.contactoNombre }}</td>
+      <td>{{ empresa.contactoEmail }}</td>
+    </tr>
+    </tbody>
+  </table>
