@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'listado-empresas',
@@ -9,7 +10,13 @@ export class ListadoEmpresasComponent implements OnInit {
 
   empresas : any;
 
-  constructor() { 
+  model: NgbDateStruct;
+  date: {year: number, month: number};
+
+  constructor(
+    private calendar: NgbCalendar
+  ) 
+  { 
     this.empresas = [{
           'nombre': "nestle",
           'puestos': '5',
@@ -32,6 +39,10 @@ export class ListadoEmpresasComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  selectToday() {
+    this.model = this.calendar.getToday();
   }
 
 }
