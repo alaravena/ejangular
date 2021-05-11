@@ -14,7 +14,7 @@
     <tr *ngFor="let empresa of empresas; index as i">
       <th scope="row">{{ i + 1 }}</th>
       <td>{{ empresa.nombre }}</td>
-      <td>{{ empresa.puestos | number }}</td>
+      <td>{{ empresa.puestos | currency : 'EUR'}}</td>
       <td>{{ empresa.contactoNombre }}</td>
       <td>{{ empresa.contactoEmail }}</td>
     </tr>

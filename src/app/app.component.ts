@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'gestioncv';
   ejemplo = 'Ejemplo de variable';
   unArray = ['uno', 'dos', 'tres', 'cuatro'];
+  eje: string = "ejemplo";
 
   menu = [
     {

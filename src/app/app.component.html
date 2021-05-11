@@ -1,6 +1,8 @@
 <menu-nav></menu-nav>
   <p>{{ ejemplo }} la puedo ver</p>
   <p *ngFor='let elemento of unArray '>{{ elemento }} <span *ngIf="elemento == 'tres'">ESTE</span></p>
+  <p>{{ eje }}</p>
+  <input type="text" name="nombre" [(ngModel)]="eje" />
 
   <listado-empresas></listado-empresas>
 
